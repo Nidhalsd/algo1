@@ -1,0 +1,25 @@
+
+
+ALGORITHM checkpoint
+VAR
+    str : STRING
+    i : INTEGER := 0
+    nb_c , nb_v : INTEGER:= 0
+    nb_w : INTEGER := 1
+BEGIN
+    write ("enter a sentance")
+    read (str)
+    WHILE ( str(i) <> "." ) DO
+       nb_c = nb_c + 1
+       IF ( str(i)= " " ) THEN
+       nb_w = nb_w + 1
+       END_IF
+       IF ( str(i) = ("a","e","i","u","o") ) THEN
+        nb_v = nb_v + 1
+       END_IF
+       i++
+    END_WHILE
+    write (nb_c)
+    write (nb_v)
+    write (nb_w)
+END 
